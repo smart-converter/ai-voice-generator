@@ -3,45 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Human AI Voices</title>
+    <title>AI Voice Showcase</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; background-color: #f4f7f6; }
-        .container { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .audio-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 15px; margin-bottom: 15px; }
-        .audio-label { font-weight: bold; display: block; margin-bottom: 10px; color: #0088cc; }
-        audio { width: 100%; }
-        .cta-button { display: inline-block; background: #111; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; width: 85%; }
-        .load-btn { background: #00d2ff; color: #fff; border: none; padding: 10px 20px; border-radius: 10px; font-weight: bold; margin-bottom: 20px; cursor: pointer; }
+        body { font-family: -apple-system, system-ui, sans-serif; text-align: center; padding: 20px; background: #f0f2f5; color: #1c1e21; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 400px; margin: 0 auto; }
+        .voice-box { margin-bottom: 20px; text-align: left; background: #f8f9fa; padding: 15px; border-radius: 10px; border: 1px solid #ddd; }
+        label { font-weight: bold; font-size: 14px; color: #555; display: block; margin-bottom: 8px; }
+        audio { width: 100%; height: 35px; }
+        .btn { display: inline-block; background: #000; color: #fff; padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 10px; width: 80%; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎙️ Real Human Voices</h1>
-        
-        <button class="load-btn" onclick="this.style.display='none'">Tap to Activate Player ✨</button>
+    <div class="card">
+        <h2>🎙️ Realistic AI Voices</h2>
+        <p>Experience the power of ElevenLabs</p>
 
-        <div class="audio-card">
-            <span class="audio-label">Male Voice (Adam):</span>
-            <audio controls preload="metadata">
-                <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Adam/adam.mp3" type="audio/mpeg">
-            </audio>
+        <div class="voice-box">
+            <label>1. Male Voice (Adam)</label>
+            <audio controls><source src="adam.mp3" type="audio/mpeg"></audio>
         </div>
 
-        <div class="audio-card">
-            <span class="audio-label">Female Voice (Rachel):</span>
-            <audio controls preload="metadata">
-                <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Rachel/rachel.mp3" type="audio/mpeg">
-            </audio>
+        <div class="voice-box">
+            <label>2. Female Voice (Rachel)</label>
+            <audio controls><source src="rachel.mp3" type="audio/mpeg"></audio>
         </div>
 
-        <div class="audio-card">
-            <span class="audio-label">Soft Voice (Bella):</span>
-            <audio controls preload="metadata">
-                <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Bella/bella.mp3" type="audio/mpeg">
-            </audio>
+        <div class="voice-box">
+            <label>3. Cheerful Voice (Bella)</label>
+            <audio controls><source src="bella.mp3" type="audio/mpeg"></audio>
         </div>
 
-        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="cta-button">Try ElevenLabs Free</a>
+        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="btn">Get Started for Free</a>
     </div>
 </body>
 </html>
