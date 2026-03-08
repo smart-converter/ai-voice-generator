@@ -3,70 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Best AI Voice Generator - ElevenLabs</title>
+    <title>AI Voice Generator</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; text-align: center; background-color: #f9f9f9; }
-        .container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        h1 { color: #1a1a1a; font-size: 2.5em; margin-bottom: 20px; }
-        p { font-size: 1.2em; color: #555; }
-        .features { text-align: left; display: inline-block; margin: 30px 0; }
-        .features li { margin-bottom: 10px; font-size: 1.1em; list-style: none; }
-        .features li::before { content: "✅ "; }
-        .cta-button { display: inline-block; background-color: #111; color: white; padding: 20px 40px; font-size: 1.3em; text-decoration: none; border-radius: 50px; font-weight: bold; transition: transform 0.2s, background-color 0.2s; margin-top: 20px; }
-        .cta-button:hover { background-color: #333; transform: scale(1.05); }
-        .small-print { margin-top: 30px; font-size: 0.9em; color: #999; }
-        .audio-btn { background: #f0f0f0; color: #111; border: 1px solid #ddd; padding: 12px; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; font-weight: 500; transition: 0.2s; margin-bottom: 10px; }
-        .audio-btn:hover { background: #e0e0e0; }
+        body { font-family: sans-serif; text-align: center; padding: 20px; background: #f9f9f9; }
+        .container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 500px; margin: 0 auto; }
+        .audio-block { margin: 20px 0; padding: 15px; border: 1px solid #00d2ff; border-radius: 10px; }
+        p { font-weight: bold; color: #0088cc; }
+        label { display: block; margin-top: 15px; font-size: 0.9em; color: #666; }
+        audio { width: 100%; margin-top: 5px; }
+        .cta-btn { display: inline-block; background: #111; color: white; padding: 15px 30px; text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Transform Your Content with Realistic AI Voices</h1>
-        <p>Stop using robotic, boring voices. 🎙️ <strong>ElevenLabs</strong> creates speech that sounds 100% human.</p>
-        
-        <ul class="features">
-            <li>Emotionally expressive and natural sounds</li>
-            <li>Supports 29+ languages (including Ukrainian)</li>
-            <li>Perfect for YouTube, Podcasts, and Social Media</li>
-            <li>Instant voice cloning and text-to-speech</li>
-        </ul>
+        <h1>Transform Your Content</h1>
+        <p>Listen to ElevenLabs Voices: ✨</p>
 
-        <div style="margin: 25px 0; background: #fafafa; padding: 20px; border-radius: 15px; border: 2px solid #00d2ff;">
-            <p style="color: #0088cc; font-weight: bold; margin-bottom: 15px; font-size: 1.1em;">Listen to AI Magic: ✨</p>
-            
-            <button class="audio-btn" onclick="playAudio(0)"><span>▶️</span> Male Voice (Adam)</button>
-            <button class="audio-btn" onclick="playAudio(1)"><span>▶️</span> Female Voice (Rachel)</button>
-            <button class="audio-btn" onclick="playAudio(2)"><span>▶️</span> Cheerful Voice (Bella)</button>
+        <div class="audio-block">
+            <label>Male Voice (Adam):</label>
+            <audio controls preload="auto">
+                <source src="voice1.mp3" type="audio/mpeg">
+            </audio>
+
+            <label>Female Voice (Rachel):</label>
+            <audio controls preload="auto">
+                <source src="voice2.mp3" type="audio/mpeg">
+            </audio>
+
+            <label>Cheerful Voice (Bella):</label>
+            <audio controls preload="auto">
+                <source src="voice3.mp3" type="audio/mpeg">
+            </audio>
         </div>
 
-        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="cta-button">Try ElevenLabs for Free</a>
-        <p class="small-print">Get 10,000 characters every month at no cost.</p>
+        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="cta-btn">Try for Free</a>
     </div>
-
-    <script>
-        // Попереднє завантаження всіх файлів у масив
-        const sounds = [
-            new Audio('voice1.mp3?v=1'),
-            new Audio('voice2.mp3?v=1'),
-            new Audio('voice3.mp3?v=1')
-        ];
-
-        function playAudio(index) {
-            // Зупиняємо всі інші звуки перед початком
-            sounds.forEach(s => {
-                s.pause();
-                s.currentTime = 0;
-            });
-            
-            // Відтворюємо обраний звук
-            const playPromise = sounds[index].play();
-            
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.log("Відтворення заблоковано браузером. Потрібен клік користувача.");
-                });
-            }
-        }
-    </script>
 </body>
 </html>
