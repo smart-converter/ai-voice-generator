@@ -38,9 +38,9 @@
             <p style="color: #0088cc; font-weight: bold; margin-bottom: 15px; font-size: 1.1em;">Listen to AI Magic: ✨</p>
             
             <div style="display: flex; flex-direction: column; gap: 12px;">
-                <button class="audio-btn" onclick="playAudio('voice1.mp3')"><span>▶️</span> Female Voice (Rachel)</button>
-                <button class="audio-btn" onclick="playAudio('voice2.mp3')"><span>▶️</span> Male Voice (Adam)</button>
-                <button class="audio-btn" onclick="playAudio('voice3.mp3')"><span>▶️</span> Professional Voice</button>
+                <button class="audio-btn" onclick="playAudio('voice1.mp3')"><span>▶️</span> Male Voice (Adam)</button>
+                <button class="audio-btn" onclick="playAudio('voice2.mp3')"><span>▶️</span> Female Voice (Rachel)</button>
+                <button class="audio-btn" onclick="playAudio('voice3.mp3')"><span>▶️</span> Cheerful Voice (Bella)</button>
             </div>
         </div>
 
@@ -51,13 +51,16 @@
 
     <script>
         let currentAudio = null;
-        function playAudio(file) {
+        function playAudio(fileName) {
             if (currentAudio) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
             }
-            currentAudio = new Audio(file);
-            currentAudio.play();
+            // Додаємо випадкове число для обходу кешу iPhone
+            currentAudio = new Audio(fileName + '?v=' + Math.random());
+            currentAudio.play().catch(function(error) {
+                console.log("Audio play failed: ", error);
+            });
         }
     </script>
 </body>
