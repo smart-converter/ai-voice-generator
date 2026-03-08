@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Content - ElevenLabs</title>
+    <title>Real Human AI Voices</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 30px 20px; text-align: center; background-color: #f4f7f6; }
-        .container { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { color: #111; font-size: 2em; margin-bottom: 10px; }
-        .audio-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 15px; margin-bottom: 15px; text-align: left; }
-        .audio-label { font-weight: bold; display: block; margin-bottom: 8px; color: #0088cc; }
-        audio { width: 100%; height: 40px; }
-        .cta-button { display: inline-block; background: #111; color: white; padding: 18px 35px; font-size: 1.2em; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 25px; width: 80%; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 500px; margin: 0 auto; padding: 20px; text-align: center; background-color: #f4f7f6; }
+        .container { background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .audio-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 15px; margin-bottom: 15px; }
+        .audio-label { font-weight: bold; display: block; margin-bottom: 10px; color: #0088cc; }
+        audio { width: 100%; }
+        .cta-button { display: inline-block; background: #111; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px; width: 85%; }
+        .load-btn { background: #00d2ff; color: #fff; border: none; padding: 10px 20px; border-radius: 10px; font-weight: bold; margin-bottom: 20px; cursor: pointer; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🎙️ Real Human Voices</h1>
-        <p>Listen to how ElevenLabs sounds:</p>
+        
+        <button class="load-btn" onclick="this.style.display='none'">Tap to Activate Player ✨</button>
 
         <div class="audio-card">
             <span class="audio-label">Male Voice (Adam):</span>
-            <audio controls>
+            <audio controls preload="metadata">
                 <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Adam/adam.mp3" type="audio/mpeg">
             </audio>
         </div>
 
         <div class="audio-card">
             <span class="audio-label">Female Voice (Rachel):</span>
-            <audio controls>
+            <audio controls preload="metadata">
                 <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Rachel/rachel.mp3" type="audio/mpeg">
             </audio>
         </div>
 
         <div class="audio-card">
             <span class="audio-label">Soft Voice (Bella):</span>
-            <audio controls>
+            <audio controls preload="metadata">
                 <source src="https://storage.googleapis.com/eleven-public-prod/pre-made-voices/Bella/bella.mp3" type="audio/mpeg">
             </audio>
         </div>
 
-        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="cta-button">Try it for Free</a>
-        <p style="font-size: 0.8em; color: #999; margin-top: 15px;">No credit card required to start.</p>
+        <a href="https://try.elevenlabs.io/gbjvlcndkh9n" class="cta-button">Try ElevenLabs Free</a>
     </div>
 </body>
 </html>
